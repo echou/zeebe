@@ -137,7 +137,7 @@ var initClient = func(cmd *cobra.Command, args []string) error {
 		GatewayAddress:      fmt.Sprintf("%s:%s", host, port),
 		CredentialsProvider: credsProvider,
 		DialOpts: []grpc.DialOption{
-		    grpc.WithUnaryInterceptor(grpc_prometheus.UnaryClientInterceptor),
+			grpc.WithUnaryInterceptor(grpc_prometheus.UnaryClientInterceptor),
 			grpc.WithStreamInterceptor(grpc_prometheus.StreamClientInterceptor),
 		},
 	})

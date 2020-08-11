@@ -67,7 +67,7 @@ var workerCmd = &cobra.Command{
 			PollInterval(workerPollingDelayFlag).
 			RequestTimeout(DefaultTimeout).
 			Timeout(workerJobTimeoutFlag).
-		    Metrics(workerJobMetrics).
+			Metrics(workerJobMetrics).
 			Open()
 
 		jobWorker.AwaitClose()
