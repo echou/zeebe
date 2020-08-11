@@ -76,7 +76,7 @@ mapping. Note that this may overwrite existing variables and can lead to race co
 parallel flows. We recommend completing jobs with only those variables that need to be changed.
 
 If the job worker could not successfully complete its work, it can inform the broker of this failure
-by sending a fail job command. Fail job messages include a retries number. If this is a positive
+by sending a fail job command. Fail job commands include the number of remaining retries. If this is a positive
 number then the job will be immediately activatable again, and a worker could try to process it
 again. If it is zero or negative however, an incident will be raised and the job will not be
 activatable until the incident is resolved.
